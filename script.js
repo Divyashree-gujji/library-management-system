@@ -1,6 +1,6 @@
 // Local In-Memory Database containing exactly 10 comprehensive records per category
 let books = [
-    // --- FICTION ---
+    // --- FICTION ----
     { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Fiction", isbn: "9780743273565", location: "Floor 2, Wing A, Shelf F-1", status: "Available" },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Fiction", isbn: "9780061120084", location: "Floor 2, Wing A, Shelf F-2", status: "Available" },
     { id: 3, title: "1984", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
