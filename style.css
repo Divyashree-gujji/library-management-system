@@ -1,0 +1,468 @@
+/* ==========================================================================
+   1. VARIABLES & DESIGN SYSTEM (VIBRANT, FRESH & ALIVE)
+   ========================================================================== */
+:root {
+    --bg-primary: #f4f7fe;
+    --bg-surface: #ffffff;
+    --bg-surface-alt: #f8fafc;
+    
+    /* Energetic Accent Palette */
+    --brand-primary: #6366f1;
+    --brand-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    --neon-pink: #f43f5e;
+    --neon-cyan: #06b6d4;
+    
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    
+    --border-color: #e2e8f0;
+    --border-focus: #8b5cf6;
+    
+    --status-success: #10b981;
+    --status-success-bg: #d1fae5;
+    --status-error: #ef4444;
+    --status-error-bg: #fee2e2;
+    
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    
+    /* Glowing colorful shadows instead of muddy dark ones */
+    --shadow-sm: 0 4px 6px -1px rgba(99, 102, 241, 0.05);
+    --shadow-md: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.05);
+    --shadow-lg: 0 25px 50px -12px rgba(99, 102, 241, 0.15);
+    
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. GLOBAL RESETS & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* Fun subtle abstract background grid */
+    background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+}
+
+.hidden { display: none !important; }
+
+/* Premium Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 20px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
+
+/* ==========================================================================
+   3. FORM CONTROLS & DYNAMIC BUTTONS
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+.logo span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Inputs with colorful active focus states */
+.input-wrapper { margin-bottom: 1.5rem; }
+.input-wrapper label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: var(--bg-surface);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    background-color: var(--bg-surface-alt);
+}
+
+/* Vivid Buttons */
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--brand-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+    background-color: var(--bg-surface);
+    color: var(--brand-primary);
+    border: 2px solid rgba(99, 102, 241, 0.2);
+}
+.btn-secondary:hover {
+    background-color: rgba(99, 102, 241, 0.05);
+    border-color: var(--brand-primary);
+}
+
+.btn-logout {
+    background: transparent;
+    color: var(--status-error);
+    border: 2px solid transparent;
+}
+.btn-logout:hover {
+    background: var(--status-error-bg);
+}
+
+.w-100 { width: 100%; }
+
+/* ==========================================================================
+   4. AUTHENTICATION (LOGIN PAGE)
+   ========================================================================== */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    /* Soft mesh gradient blobs */
+    background: 
+        radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(244, 63, 94, 0.1) 0px, transparent 50%),
+        var(--bg-primary);
+}
+
+.auth-card {
+    background: var(--bg-surface);
+    padding: 3.5rem 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.auth-header { text-align: center; margin-bottom: 2.5rem; }
+.auth-header .logo { justify-content: center; margin-bottom: 1rem; font-size: 2.25rem; }
+.auth-header h2 { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+.auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
+
+/* ==========================================================================
+   5. NAVBAR WITH FROSTED GLASS EFFECTS
+   ========================================================================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-profile { display: flex; align-items: center; gap: 1.5rem; }
+.user-identity-badge {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--neon-cyan);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6. MAIN WORKSPACE & VIVID HERO HERO SECTION
+   ========================================================================== */
+.dashboard-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem 4rem;
+}
+
+/* Eye-Catching Colorful Hero Card with Embedded Graphic */
+.hero-section {
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #c084fc 100%);
+    padding: 3.5rem;
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+    /* Injected high-quality workspace image overlay */
+    background-image: linear-gradient(90deg, rgba(79,70,229,0.9) 30%, rgba(124,58,237,0.4) 100%), url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section h2 { font-size: 3rem; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.15; }
+.hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 650px; font-weight: 500; }
+
+/* Filter Actions Bar */
+.search-filter-bar { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
+.search-box { flex: 1; }
+.filter-box { width: 260px; }
+
+.results-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(99, 102, 241, 0.06);
+    border-radius: 6px;
+    color: var(--brand-primary);
+}
+
+/* ==========================================================================
+   7. STUDENT VIEW: NEOMORPHIC CATALOG CARDS (WITH BOOK COVERS)
+   ========================================================================== */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.book-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.book-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: transparent;
+    box-shadow: 0 20px 35px rgba(99, 102, 241, 0.15);
+}
+
+/* Default Cover Block style that expects your script to inject an image url */
+.book-card-cover {
+    width: 100%;
+    height: 320px;
+    background-color: var(--bg-surface-alt);
+    border-radius: calc(var(--radius-md) - 6px);
+    margin-bottom: 1.25rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    transition: var(--transition);
+    /* Default generic beautiful abstract art if js cover is missing */
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60');
+}
+.book-card:hover .book-card-cover {
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
+}
+
+.book-card-header .category-pill {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    background: rgba(99, 102, 241, 0.08);
+    color: var(--brand-primary);
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.book-card h3 { color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.35rem; line-height: 1.3; }
+.book-card .author { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+
+.book-card-footer {
+    border-top: 2px solid var(--bg-primary);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.status-pill.available { background: var(--status-success-bg); color: var(--status-success); }
+.status-pill.borrowed { background: var(--status-error-bg); color: var(--status-error); }
+
+/* ==========================================================================
+   8. ADMIN INTERFACE WORKBENCH
+   ========================================================================== */
+.admin-grid-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+}
+
+.admin-panel-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.admin-panel-card h3 { margin-bottom: 1.5rem; font-size: 1.4rem; border-left: 4px solid var(--brand-primary); padding-left: 0.5rem; }
+
+.admin-table-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+.table-header-flex { padding: 1.75rem; border-bottom: 1px solid var(--border-color); }
+
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th {
+    background-color: var(--bg-surface-alt);
+    color: var(--text-secondary);
+    font-weight: 800;
+    padding: 1.25rem 1.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+td { padding: 1.25rem 1.75rem; border-bottom: 1px solid var(--border-color); color: var(--text-primary); font-weight: 500; }
+tr:hover td { background-color: var(--bg-surface-alt); }
+
+.btn-delete { background: transparent; color: var(--status-error); font-size: 0.85rem; font-weight: 700; }
+.btn-delete:hover { background: var(--status-error-bg); border-radius: 6px; }
+
+/* ==========================================================================
+   9. POPUP MODAL DIALOG MODALS
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(20px);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 100; padding: 1.5rem;
+}
+
+.modal-window {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%; max-width: 580px;
+    overflow: hidden;
+    animation: modalReveal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalReveal {
+    from { transform: scale(0.9) translateY(30px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modal-banner { height: 8px; background: var(--brand-gradient); }
+.modal-body { padding: 3rem; position: relative; }
+.close-modal-btn {
+    position: absolute; top: 1.5rem; right: 2rem;
+    font-size: 2.25rem; color: var(--text-muted); cursor: pointer; transition: var(--transition);
+}
+.close-modal-btn:hover { color: var(--text-primary); }
+
+.category-pill-tag {
+    display: inline-block; font-size: 0.75rem; font-weight: 800;
+    color: #fff; background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--brand-primary) 100%);
+    padding: 0.35rem 1rem; border-radius: 6px; margin-bottom: 1.25rem; text-transform: uppercase;
+}
+#modalTitle { color: var(--text-primary); font-size: 2rem; margin-bottom: 0.5rem; }
+.modal-author-sub { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem; }
+
+.meta-specs-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+    background-color: var(--bg-primary); padding: 1.25rem;
+    border-radius: var(--radius-sm); margin-bottom: 2rem;
+}
+.meta-specs-row strong { display: block; color: var(--brand-primary); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.35rem; letter-spacing: 0.05em; }
+
+.location-routing-card {
+    display: flex; gap: 1.25rem; align-items: center;
+    background: rgba(6, 182, 212, 0.05); border: 2px dashed rgba(6, 182, 212, 0.2);
+    padding: 1.5rem; border-radius: var(--radius-sm);
+}
+.location-routing-card .loc-icon { font-size: 2rem; }
+.location-routing-card h4 { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.15rem; }
+.location-routing-card p { font-weight: 700; color: var(--text-primary); }
+
+/* ==========================================================================
+   10. MEDIA ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .admin-grid-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .navbar { padding: 1.5rem 2rem; flex-direction: column; gap: 1rem; }
+    .nav-profile { width: 100%; justify-content: space-between; }
+    .dashboard-container { padding: 2rem; }
+    .hero-section { padding: 2.5rem; }
+    .hero-section h2 { font-size: 2.25rem; }
+    .search-filter-bar { flex-direction: column; }
+    .filter-box { width: 100%; }
+}
