@@ -178,7 +178,8 @@ function handleModalOverlayClick(e) {
     if (e.target.id === "detailsModal") closeModal();
 }
 
-// Admin Table Inventory Management Render Engine
+
+// Admin Tables Inventory Management Render Engines
 function renderAdminTable() {
     const tbody = document.getElementById("adminTableBody");
     tbody.innerHTML = "";
