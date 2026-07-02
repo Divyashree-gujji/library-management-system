@@ -25,7 +25,7 @@ let books = [
     { id: 17, title: "Sapiens", author: "Yuval Noah Harari", category: "Science", isbn: "9780062316097", location: "Floor 1, Wing D, Shelf S-7", status: "Borrowed" },
     { id: 18, title: "The Emperor of All Maladies", author: "Siddhartha Mukherjee", category: "Science", isbn: "9781439170915", location: "Floor 1, Wing D, Shelf S-8", status: "Available" },
     { id: 19, title: "Silent Spring", author: "Rachel Carson", category: "Science", isbn: "9780618249060", location: "Floor 1, Wing E, Shelf S-9", status: "Available" },
-    { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Available" },
+    { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Borrowed" },
 
     // --- HISTORY ---
     { id: 21, title: "The Guns of August", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
