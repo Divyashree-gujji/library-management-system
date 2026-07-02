@@ -23,3 +23,4 @@ This project is a Library Management System developed using HTML, CSS, and JavaS
 - Pallavi DM
 - Chandana A
 
+Updated on Thu Jul  2 23:36:21 IST 2026
