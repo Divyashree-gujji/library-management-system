@@ -42,7 +42,7 @@ let books = [
     // --- TECHNOLOGY ---
     { id: 31, title: "Introduction to Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
     { id: 32, title: "Clean Code", author: "Robert C. Martin", category: "Technology", isbn: "9780132350884", location: "Floor 4, Wing A, Shelf T-2", status: "Available" },
-    { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Borrowed" },
+    { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Available" },
     { id: 34, title: "The Pragmatic Programmer", author: "Andrew Hunt", category: "Technology", isbn: "9780135957059", location: "Floor 4, Wing B, Shelf T-4", status: "Available" },
     { id: 35, title: "JavaScript: The Good Parts", author: "Douglas Crockford", category: "Technology", isbn: "9780596517748", location: "Floor 4, Wing C, Shelf T-5", status: "Available" },
     { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Available" },
