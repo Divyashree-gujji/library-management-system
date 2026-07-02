@@ -42,7 +42,7 @@ let books = [
     { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Available" },
     { id: 34, title: "The Pragmatic Programmer", author: "Andrew Hunt", category: "Technology", isbn: "9780135957059", location: "Floor 4, Wing B, Shelf T-4", status: "Available" },
     { id: 35, title: "JavaScript: The Good Parts", author: "Douglas Crockford", category: "Technology", isbn: "9780596517748", location: "Floor 4, Wing C, Shelf T-5", status: "Available" },
-    { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Available" },
+    { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Borrowed" },
     { id: 37, title: "Compilers: Principles, Techniques, and Tools", author: "Alfred Aho", category: "Technology", isbn: "9780321483461", location: "Floor 4, Wing D, Shelf T-7", status: "Borrowed" },
     { id: 38, title: "Artificial Intelligence: A Modern Approach", author: "Stuart Russell", category: "Technology", isbn: "9780136042594", location: "Floor 4, Wing D, Shelf T-8", status: "Available" },
     { id: 39, title: "The Phoenix Project", author: "Gene Kim", category: "Technology", isbn: "9780988262591", location: "Floor 4, Wing E, Shelf T-9", status: "Available" },
