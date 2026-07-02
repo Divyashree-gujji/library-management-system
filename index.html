@@ -22,12 +22,12 @@
                 <div class="input-wrapper">
                     <label>Role Privilege</label>
                     <select id="loginRole" onchange="autoFillCredentials()">
-                        <option value="student">Student Account (View Only)</option>
+                        <option value="student">Student Account Number(View Only)</option>
                         <option value="admin">Library Administrator (Full Access)</option>
                     </select>
                 </div>
                 <div class="input-wrapper">
-                    <label>Identification or Email</label>
+                    <label>Identification or Email Address</label>
                     <input type="text" id="loginUser" value="student@university.edu" required>
                 </div>
                 <div class="input-wrapper">
@@ -44,7 +44,7 @@
             <div class="logo">📚 Aura<span>Lib</span></div>
             <div class="nav-profile">
                 <span id="userBadge" class="user-identity-badge">Student View</span>
-                <button id="toggleAdminBtn" class="btn-secondary" onclick="toggleAdminView()">Switch to Admin</button>
+                <button id="toggleAdminBtn" class="btn-secondary" onclick="toggleAdminView()">Switch to the Admin</button>
                 <button class="btn-logout" onclick="handleLogout()">Logout</button>
             </div>
         </header>
@@ -53,7 +53,7 @@
             <section id="studentView">
                 <div class="hero-section">
                     <h2>Locate Library Assets Instantly.</h2>
-                    <p>Search through real time catalog records with precise stack shelf mappings.</p>
+                    <p>Search through the real time catalog records with precise stack shelf mappings.</p>
                 </div>
 
                 <div class="search-filter-bar">
