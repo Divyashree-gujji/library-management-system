@@ -52,7 +52,7 @@ let books = [
 let sessionRole = null;
 let currentView = "student";
 
-// Autopopulate helper to save user testing evaluation speed
+// Autopopulate helper to save the user testing evaluation speed
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
     document.getElementById("loginUser").value = role === "admin" ? "admin@university.edu" : "student@university.edu";
