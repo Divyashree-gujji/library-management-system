@@ -152,7 +152,7 @@ function filterBooks() {
     renderStudentGrid(queryResult);
 }
 
-// Modal View Engine
+// Modals View Engines
 function openDetailsModal(id) {
     const book = books.find(b => b.id === id);
     if (!book) return;
