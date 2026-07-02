@@ -59,7 +59,7 @@ function autoFillCredentials() {
     document.getElementById("loginPass").value = role === "admin" ? "admin123" : "student123";
 }
 
-// Security Gate Engine
+// Security of the Gate Engines
 function handleLogin(e) {
     e.preventDefault();
     const role = document.getElementById("loginRole").value;
