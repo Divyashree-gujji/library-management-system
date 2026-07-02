@@ -25,7 +25,7 @@ let books = [
     { id: 17, title: "Sapiens", author: "Yuval Noah Harari", category: "Science", isbn: "9780062316097", location: "Floor 1, Wing D, Shelf S-7", status: "Borrowed" },
     { id: 18, title: "The Emperor of All Maladies", author: "Siddhartha Mukherjee", category: "Science", isbn: "9781439170915", location: "Floor 1, Wing D, Shelf S-8", status: "Available" },
     { id: 19, title: "Silent Spring", author: "Rachel Carson", category: "Science", isbn: "9780618249060", location: "Floor 1, Wing E, Shelf S-9", status: "Available" },
-    { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Available" },
+    { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Borrowed" },
 
     // --- HISTORY ---
     { id: 21, title: "The Guns of August", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
@@ -37,15 +37,15 @@ let books = [
     { id: 27, title: "Guns, Germs, and Steel", author: "Jared Diamond", category: "History", isbn: "9780393354324", location: "Floor 3, Wing D, Shelf H-7", status: "Available" },
     { id: 28, title: "1776", author: "David McCullough", category: "History", isbn: "9780743226721", location: "Floor 3, Wing D, Shelf H-8", status: "Available" },
     { id: 29, title: "SPQR: A History of Ancient Rome", author: "Mary Beard", category: "History", isbn: "9781631492426", location: "Floor 3, Wing E, Shelf H-9", status: "Available" },
-    { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Available" },
+    { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Borrowed" },
 
     // --- TECHNOLOGY ---
-    { id: 31, title: "Introduction to Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
+    { id: 31, title: "Introduction to   Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
     { id: 32, title: "Clean Code", author: "Robert C. Martin", category: "Technology", isbn: "9780132350884", location: "Floor 4, Wing A, Shelf T-2", status: "Available" },
-    { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Borrowed" },
+    { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Available" },
     { id: 34, title: "The Pragmatic Programmer", author: "Andrew Hunt", category: "Technology", isbn: "9780135957059", location: "Floor 4, Wing B, Shelf T-4", status: "Available" },
     { id: 35, title: "JavaScript: The Good Parts", author: "Douglas Crockford", category: "Technology", isbn: "9780596517748", location: "Floor 4, Wing C, Shelf T-5", status: "Available" },
-    { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Available" },
+    { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Borrowed" },
     { id: 37, title: "Compilers: Principles, Techniques, and Tools", author: "Alfred Aho", category: "Technology", isbn: "9780321483461", location: "Floor 4, Wing D, Shelf T-7", status: "Borrowed" },
     { id: 38, title: "Artificial Intelligence: A Modern Approach", author: "Stuart Russell", category: "Technology", isbn: "9780136042594", location: "Floor 4, Wing D, Shelf T-8", status: "Available" },
     { id: 39, title: "The Phoenix Project", author: "Gene Kim", category: "Technology", isbn: "9780988262591", location: "Floor 4, Wing E, Shelf T-9", status: "Available" },
