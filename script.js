@@ -37,7 +37,7 @@ let books = [
     { id: 27, title: "Guns, Germs, and Steel", author: "Jared Diamond", category: "History", isbn: "9780393354324", location: "Floor 3, Wing D, Shelf H-7", status: "Available" },
     { id: 28, title: "1776", author: "David McCullough", category: "History", isbn: "9780743226721", location: "Floor 3, Wing D, Shelf H-8", status: "Available" },
     { id: 29, title: "SPQR: A History of Ancient Rome", author: "Mary Beard", category: "History", isbn: "9781631492426", location: "Floor 3, Wing E, Shelf H-9", status: "Available" },
-    { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Available" },
+    { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Borrowed" },
 
     // --- TECHNOLOGY ---
     { id: 31, title: "Introduction to Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
