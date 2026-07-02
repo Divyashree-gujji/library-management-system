@@ -52,14 +52,14 @@ let books = [
 let sessionRole = null;
 let currentView = "student";
 
-// Autopopulate helper to save user testing evaluation speed
+// Autopopulate helper to save testing evaluation speed of user
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
     document.getElementById("loginUser").value = role === "admin" ? "admin@university.edu" : "student@university.edu";
     document.getElementById("loginPass").value = role === "admin" ? "admin123" : "student123";
 }
 
-// Security Gate Engine
+// Security Gate Engines
 function handleLogin(e) {
     e.preventDefault();
     const role = document.getElementById("loginRole").value;
