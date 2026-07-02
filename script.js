@@ -240,7 +240,7 @@ function deleteBookRecord(id) {
         renderAdminTable();
     }
 }
-// Make sure your rendering function loops out exactly this layout block:
+// Make sure your rendering function loops  are exactly out of this layout blocks:
 filteredBooks.forEach(book => {
     const card = document.createElement('div');
     card.className = 'book-card';
