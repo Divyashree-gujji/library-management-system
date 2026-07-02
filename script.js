@@ -37,7 +37,7 @@ let books = [
     { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Borrowed" },
 
     // --- TECHNOLOGY ---
-    { id: 31, title: "Introduction to Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
+    { id: 31, title: "Introduction to  the Algorithms", author: "Thomas H. Cormen", category: "Technology", isbn: "9780262033848", location: "Floor 4, Wing A, Shelf T-1", status: "Available" },
     { id: 32, title: "Clean Code", author: "Robert C. Martin", category: "Technology", isbn: "9780132350884", location: "Floor 4, Wing A, Shelf T-2", status: "Available" },
     { id: 33, title: "Design Patterns", author: "Erich Gamma", category: "Technology", isbn: "9780201633610", location: "Floor 4, Wing B, Shelf T-3", status: "Available" },
     { id: 34, title: "The Pragmatic Programmer", author: "Andrew Hunt", category: "Technology", isbn: "9780135957059", location: "Floor 4, Wing B, Shelf T-4", status: "Available" },
