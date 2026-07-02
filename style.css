@@ -183,7 +183,7 @@ button {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     width: 100%;
-    max-width: 480px;
+    max-width: 470px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
