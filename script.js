@@ -68,7 +68,7 @@ function handleLogin(e) {
     document.getElementById("loginPage").classList.add("hidden");
     document.getElementById("appInterface").classList.remove("hidden");
     
-    // UI adaptation based on privileges
+    // UI adaptation based on the privilege
     if (sessionRole === "student") {
         document.getElementById("toggleAdminBtn").classList.add("hidden");
         document.getElementById("userBadge").innerText = "🔒 Student Access";
