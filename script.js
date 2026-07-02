@@ -1,4 +1,4 @@
-// Local In-Memory Database containing exactly 10 comprehensive records per category
+// LocaL In-Memory Database containing exactly 10 comprehensive records per category
 let books = [
     // --- FICTION ----
     { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Fiction", isbn: "9780743273565", location: "Floor 2, Wing A, Shelf F-1", status: "Available" },
