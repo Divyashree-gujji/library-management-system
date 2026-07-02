@@ -183,7 +183,7 @@ button {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     width: 100%;
-    max-width: 480px;
+    max-width: 470px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
@@ -215,7 +215,7 @@ button {
     font-size: 0.75rem;
     font-weight: 800;
     padding: 0.4rem 1rem;
-    border-radius: 30px;
+    border-radius: 35px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -245,7 +245,7 @@ button {
 }
 
 .hero-section h2 { font-size: 3rem; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.15; }
-.hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 650px; font-weight: 500; }
+.hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.3rem; max-width: 650px; font-weight: 500; }
 
 /* Filter Actions Bar */
 .search-filter-bar { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
