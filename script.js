@@ -220,7 +220,7 @@ function createNewBook(e) {
         status: "Available"
     };
 
-    books.unshift(newBook); // Prepend so it appears instantly at the top
+    books.unshift(newBook); // Prepends so it appears instantly at the top
     document.getElementById("addBookForm").reset();
     renderStudentGrid();
     renderAdminTable();
@@ -241,7 +241,7 @@ function deleteBookRecord(id) {
         renderAdminTable();
     }
 }
-// Make sure your rendering function loops  are exactly out of this layout blocks:
+// Make sure that your rendering function loops  are exactly out of this layout blocks:
 filteredBooks.forEach(book => {
     const card = document.createElement('div');
     card.className = 'book-card';
