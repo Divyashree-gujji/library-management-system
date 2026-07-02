@@ -1,6 +1,9 @@
 // LocaL In-Memory Database containing exactly 10 comprehensive records per category
 let books = [
     // --- FICTION Based  on books ----
+
+    // --- FICTIONS ----
+
     { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Fiction", isbn: "9780743273565", location: "Floor 2, Wing A, Shelf F-1", status: "Available" },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Fiction", isbn: "9780061120084", location: "Floor 2, Wing A, Shelf F-2", status: "Available" },
     { id: 3, title: "1984", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
@@ -52,14 +55,21 @@ let books = [
 let sessionRole = null;
 let currentView = "student";
 
+
 // Autopopulate helper to save the user testing evaluation speed
+
+// Autopopulate helper to save testing evaluation speed of the users
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
     document.getElementById("loginUser").value = role === "admin" ? "admin@university.edu" : "student@university.edu";
     document.getElementById("loginPass").value = role === "admin" ? "admin123" : "student123";
 }
 
+
 // Security of the Gate Engines
+
+// Security Gate Engines
+
 function handleLogin(e) {
     e.preventDefault();
     const role = document.getElementById("loginRole").value;
@@ -108,7 +118,9 @@ function toggleAdminView() {
     else switchToStudentMode();
 }
 
-// Student View on the Rendering Grid Engine
+// Student View on the Rendering Grid Engines
+// Students View Rendering Grid Engines
+
 function renderStudentGrid(booksToRender = books) {
     const grid = document.getElementById("bookGrid");
     grid.innerHTML = "";
@@ -136,7 +148,7 @@ function renderStudentGrid(booksToRender = books) {
     });
 }
 
-// Core Search and Category Filter Algorithm
+// Core Search and  the Catagory Filter Algorithms
 function filterBooks() {
     const searchVal = document.getElementById("searchInput").value.trim().toLowerCase();
     const catVal = document.getElementById("categoryFilter").value;
@@ -152,7 +164,10 @@ function filterBooks() {
     renderStudentGrid(queryResult);
 }
 
+
 // Modal View Engine     
+// Modals View Engines
+
 function openDetailsModal(id) {
     const book = books.find(b => b.id === id);
     if (!book) return;
@@ -178,7 +193,8 @@ function handleModalOverlayClick(e) {
     if (e.target.id === "detailsModal") closeModal();
 }
 
-// Admin Table Inventory Management Render Engine
+
+// Admin Tables Inventory Management Render Engines
 function renderAdminTable() {
     const tbody = document.getElementById("adminTableBody");
     tbody.innerHTML = "";
@@ -219,7 +235,7 @@ function createNewBook(e) {
         status: "Available"
     };
 
-    books.unshift(newBook); // Prepend so it appears instantly at the top
+    books.unshift(newBook); // Prepends so it appears instantly at the top
     document.getElementById("addBookForm").reset();
     renderStudentGrid();
     renderAdminTable();
@@ -240,7 +256,7 @@ function deleteBookRecord(id) {
         renderAdminTable();
     }
 }
-// Make sure your rendering function loops out exactly this layout block:
+// Make sure that your rendering function loops  are exactly out of this layout blocks:
 filteredBooks.forEach(book => {
     const card = document.createElement('div');
     card.className = 'book-card';
