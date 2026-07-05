@@ -56,8 +56,6 @@ let sessionRole = null;
 let currentView = "student";
 
 
-// Autopopulate helper to save the user testing evaluation speed
-
 // Autopopulate helper to save testing evaluation speed of the users
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
@@ -65,8 +63,6 @@ function autoFillCredentials() {
     document.getElementById("loginPass").value = role === "admin" ? "admin123" : "student123";
 }
 
-
-// Security of the Gate Engines
 
 // Security Gate Engines
 
@@ -119,7 +115,6 @@ function toggleAdminView() {
 }
 
 // Student View on the Rendering Grid Engines
-// Students View Rendering Grid Engines
 
 function renderStudentGrid(booksToRender = books) {
     const grid = document.getElementById("bookGrid");
@@ -148,7 +143,7 @@ function renderStudentGrid(booksToRender = books) {
     });
 }
 
-// Core Search and  the Catagory Filter Algorithms
+// Core Search and Catagories Filter Algorithms
 function filterBooks() {
     const searchVal = document.getElementById("searchInput").value.trim().toLowerCase();
     const catVal = document.getElementById("categoryFilter").value;
@@ -166,7 +161,6 @@ function filterBooks() {
 
 
 // Modal View Engine     
-// Modals View Engines
 
 function openDetailsModal(id) {
     const book = books.find(b => b.id === id);
