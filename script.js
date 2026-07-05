@@ -64,8 +64,6 @@ function autoFillCredentials() {
 }
 
 
-// Security of the Gate Engines
-
 // Security Gate Engines
 
 function handleLogin(e) {
