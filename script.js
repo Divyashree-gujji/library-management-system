@@ -143,7 +143,7 @@ function renderStudentGrid(booksToRender = books) {
     });
 }
 
-// Core Search and  the Catagory Filter Algorithms
+// Core Search and Catagories Filter Algorithms
 function filterBooks() {
     const searchVal = document.getElementById("searchInput").value.trim().toLowerCase();
     const catVal = document.getElementById("categoryFilter").value;
