@@ -161,7 +161,6 @@ function filterBooks() {
 
 
 // Modal View Engine     
-// Modals View Engines
 
 function openDetailsModal(id) {
     const book = books.find(b => b.id === id);
