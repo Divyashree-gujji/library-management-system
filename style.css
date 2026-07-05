@@ -35,7 +35,7 @@
 }
 
 /* ===========================================================================
-   2. GLOBAL RESETS and BASE STYLES
+   2. GLOBAL RESET and BASE STYLE
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -63,7 +63,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
 /* ==========================================================================
-   3. FORM CONTROLS and DYNAMIC BUTTONS
+   3.  FORM CONTROL and DYNAMIC BUTTONS
    ========================================================================== */
 h1, h2, h3, h4 {
     font-weight: 700;
@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Inputs with colorful active focus states */
+/* Inputs with the colorfull active focus states */
 .input-wrapper { margin-bottom: 1.5rem; }
 .input-wrapper label {
     display: block;
@@ -161,9 +161,9 @@ button {
 
 .w-100 { width: 100%; }
 
-/* ==========================================================================
-   4. AUTHENTICATION (LOGIN PAGE)
-   ========================================================================== */
+/* =======================================================================
+   4.  AUTHENTICATIONs (LOGIN PAGE)
+   ======================================================================= */
 .auth-wrapper {
     min-height: 100vh;
     display: flex;
@@ -193,7 +193,7 @@ button {
 .auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
 
 /* ==========================================================================
-   5. NAVBAR WITH FROSTED GLASS EFFECTS
+   5.  NAVBAR WITH THE FROSTED GLASS EFFECT
    ========================================================================== */
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
