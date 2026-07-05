@@ -56,8 +56,6 @@ let sessionRole = null;
 let currentView = "student";
 
 
-// Autopopulate helper to save the user testing evaluation speed
-
 // Autopopulate helper to save testing evaluation speed of the users
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
