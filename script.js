@@ -115,7 +115,6 @@ function toggleAdminView() {
 }
 
 // Student View on the Rendering Grid Engines
-// Students View Rendering Grid Engines
 
 function renderStudentGrid(booksToRender = books) {
     const grid = document.getElementById("bookGrid");
