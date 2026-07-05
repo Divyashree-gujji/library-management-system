@@ -193,7 +193,7 @@ button {
 .auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
 
 /* ==========================================================================
-   5. NAVBAR WITH FROSTED GLASS EFFECTS
+   5.  NAVBAR WITH THE FROSTED GLASS EFFECT
    ========================================================================== */
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
