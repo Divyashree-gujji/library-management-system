@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Inputs with colorful active focus states */
+/* Inputs with the colorfull active focus states */
 .input-wrapper { margin-bottom: 1.5rem; }
 .input-wrapper label {
     display: block;
