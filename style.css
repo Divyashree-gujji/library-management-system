@@ -63,7 +63,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
 /* ==========================================================================
-   3. FORM CONTROLS and DYNAMIC BUTTONS
+   3.  FORM CONTROL and DYNAMIC BUTTONS
    ========================================================================== */
 h1, h2, h3, h4 {
     font-weight: 700;
