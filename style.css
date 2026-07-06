@@ -22,9 +22,9 @@
     --status-error: #ef4444;
     --status-error-bg: #fee2e2;
     
-    --radius-sm: 10px;
+    --radius-sm: 20px;
     --radius-md: 18px;
-    --radius-lg: 28px;
+    --radius-lg: 18px;
     
     /* Glowing colorful shadows instead of muddy dark color ones */
     --shadow-sm: 0 4px 6px -1px rgba(99, 102, 241, 0.05);
