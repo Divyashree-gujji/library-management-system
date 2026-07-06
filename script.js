@@ -33,9 +33,9 @@ let books = [
     { id: 23, title: "The Rise and Fall of the Third Reich", author: "William L. Shirer", category: "History", isbn: "9781451651683", location: "Floor 3, Wing B, Shelf H-3", status: "Available" },
     { id: 24, title: "Team of Rivals", author: "Doris Kearns Goodwin", category: "History", isbn: "9780743270755", location: "Floor 3, Wing B, Shelf H-4", status: "Available" },
     { id: 25, title: "A People's History of the United States", author: "Howard Zinn", category: "History", isbn: "9780062397348", location: "Floor 3, Wing C, Shelf H-5", status: "Available" },
-    { id: 26, title: "The Silk Roads", author: "Peter Frankopan", category: "History", isbn: "9781101912379", location: "Floor 3, Wing C, Shelf H-6", status: "Borrowed" },
+    { id: 26, title: "The Silk Roads", author: "Peter Frankopan", category: "History", isbn: "9781101912379", location: "Floor 3, Wing C, Shelf H-6", status: "Available" },
     { id: 27, title: "Guns, Germs, and Steel", author: "Jared Diamond", category: "History", isbn: "9780393354324", location: "Floor 3, Wing D, Shelf H-7", status: "Available" },
-    { id: 28, title: "1776", author: "David McCullough", category: "History", isbn: "9780743226721", location: "Floor 3, Wing D, Shelf H-8", status: "Available" },
+    { id: 28, title: "1776", author: "David McCullough", category: "History", isbn: "9780743226721", location: "Floor 3, Wing D, Shelf H-8", status: "Borrowed" },
     { id: 29, title: "SPQR: A History of Ancient Rome", author: "Mary Beard", category: "History", isbn: "9781631492426", location: "Floor 3, Wing E, Shelf H-9", status: "Available" },
     { id: 30, title: "The Plantagenets", author: "Dan Jones", category: "History", isbn: "9780143124252", location: "Floor 3, Wing E, Shelf H-10", status: "Borrowed" },
 
