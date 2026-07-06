@@ -1,7 +1,7 @@
 :root {
-    --bg-primary: #f4f7fe;
-    --bg-surface: #ffffff;
-    --bg-surface-alt: #f8fafc;
+      bg-primary: #f4f7fe;
+      bg-surface: #ffffff;
+      bg-surface-alt: #f8fafc;
     
     /* Energetic interface colors */
     --brand-primary: #6366f1;
@@ -21,6 +21,11 @@
     --status-error: #ef4444;
     --status-error-bg: #fee2e2;
     
+feature-branch
+    --radius-sm: 30px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+
 
     --radius-sm: 20px;
     --radius-md: 19px;
@@ -28,6 +33,7 @@
 
     
 feature-changes
+ main
     
     shadow-sm: 0 8px 6px -1px rgba(99, 102, 241, 0.05);
 
@@ -39,9 +45,7 @@ main
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===========================================================================
-   2. GLOBAL RESET and BASE STYLE
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -61,15 +65,13 @@ body {
 
 .hidden { display: none !important; }
 
-/* Premium Scrollbar */
+
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 20px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
-/* ==========================================================================
-   3.  FORM CONTROL and DYNAMIC BUTTONS
-   ========================================================================== */
+/
 h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -166,9 +168,7 @@ button {
 
 .w-100 { width: 100%; }
 
-/* =======================================================================
-   4.  AUTHENTICATIONs (LOGIN PAGE)
-   ======================================================================= */
+
 .auth-wrapper {
     min-height: 100vh;
     display: flex;
@@ -197,9 +197,7 @@ button {
 .auth-header h2 { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.5rem; }
 .auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
 
-/* ==========================================================================
-   5.  NAVBAR WITH THE FROSTED GLASS EFFECT
-   ========================================================================== */
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
@@ -225,16 +223,13 @@ button {
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   6. MAIN WORKSPACE and VIVID HERO HERO SECTION
-   ========================================================================== */
+
 .dashboard-container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 3rem 4rem;
 }
 
-/* Eye-Catching Colorful Hero Card with Embedded Graphic */
 .hero-section {
     margin-bottom: 3rem;
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #c084fc 100%);
@@ -252,7 +247,7 @@ button {
 .hero-section h2 { font-size: 3rem; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.15; }
 .hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.3rem; max-width: 650px; font-weight: 500; }
 
-/* Filter Actions Bar */
+
 .search-filter-bar { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
 .search-box { flex: 1; }
 .filter-box { width: 260px; }
@@ -269,9 +264,7 @@ button {
     color: var(--brand-primary);
 }
 
-/* ==========================================================================
-   7. STUDENTS VIEW: NEOMORPHIC CATALOG CARDS (WITH BOOK COVER)
-   ========================================================================== */
+
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -295,7 +288,7 @@ button {
     box-shadow: 0 20px 35px rgba(99, 102, 241, 0.15);
 }
 
-/* Default Cover Block style that expects  script to inject an image url */
+
 .book-card-cover {
     width: 100%;
     height: 320px;
@@ -353,9 +346,7 @@ button {
 .status-pill.available { background: var(--status-success-bg); color: var(--status-success); }
 .status-pill.borrowed { background: var(--status-error-bg); color: var(--status-error); }
 
-/* ==========================================================================
-   8. ADMIN INTERFACE WORKBENCH
-   ========================================================================== */
+
 .admin-grid-layout {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -396,9 +387,7 @@ tr:hover td { background-color: var(--bg-surface-alt); }
 .btn-delete { background: transparent; color: var(--status-error); font-size: 0.85rem; font-weight: 700; }
 .btn-delete:hover { background: var(--status-error-bg); border-radius: 6px; }
 
-/* ==========================================================================
-   9. POPUP MODAL DIALOG MODALS
-   ========================================================================== */
+
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -454,9 +443,7 @@ tr:hover td { background-color: var(--bg-surface-alt); }
 .location-routing-card h4 { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.15rem; }
 .location-routing-card p { font-weight: 700; color: var(--text-primary); }
 
-/* ==========================================================================
-   10. MEDIA ADJUSTMENTS
-   ========================================================================== */
+
 @media (max-width: 1100px) {
     .admin-grid-layout { grid-template-columns: 1fr; }
 }
