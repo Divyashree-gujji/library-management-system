@@ -1,12 +1,10 @@
-/* ===============================================================================
-   1. VARIABLES & DESIGN SYSTEM (VIBRANT, FRESH & ALIVE)
-   ========================================================================== */
+
 :root {
     --bg-primary: #f4f7fe;
     --bg-surface: #ffffff;
     --bg-surface-alt: #f8fafc;
     
-    /* Energetic Accent Palette */
+    /* Energetic interface colors */
     --brand-primary: #6366f1;
     --brand-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
     --neon-pink: #f43f5e;
@@ -28,7 +26,7 @@
     --radius-md: 18px;
     --radius-lg: 18px;
     
-    /* Glowing colorful shadows instead of muddy dark ones */
+    /* Glowing colorful shadows instead of muddy dark color ones */
     --shadow-sm: 0 4px 6px -1px rgba(99, 102, 241, 0.05);
     --shadow-md: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.05);
     --shadow-lg: 0 25px 50px -12px rgba(99, 102, 241, 0.15);
@@ -37,7 +35,7 @@
 }
 
 /* ===========================================================================
-   2. GLOBAL RESETS & BASE STYLES
+   2. GLOBAL RESET and BASE STYLE
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -65,7 +63,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
 /* ==========================================================================
-   3. FORM CONTROLS & DYNAMIC BUTTONS
+   3.  FORM CONTROL and DYNAMIC BUTTONS
    ========================================================================== */
 h1, h2, h3, h4 {
     font-weight: 700;
@@ -88,7 +86,7 @@ h1, h2, h3, h4 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Inputs with colorful active focus states */
+/* Inputs with the colorfull active focus states */
 .input-wrapper { margin-bottom: 1.5rem; }
 .input-wrapper label {
     display: block;
@@ -163,9 +161,9 @@ button {
 
 .w-100 { width: 100%; }
 
-/* ==========================================================================
-   4. AUTHENTICATION (LOGIN PAGE)
-   ========================================================================== */
+/* =======================================================================
+   4.  AUTHENTICATIONs (LOGIN PAGE)
+   ======================================================================= */
 .auth-wrapper {
     min-height: 100vh;
     display: flex;
@@ -185,7 +183,7 @@ button {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     width: 100%;
-    max-width: 480px;
+    max-width: 470px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
@@ -195,7 +193,7 @@ button {
 .auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
 
 /* ==========================================================================
-   5. NAVBAR WITH FROSTED GLASS EFFECTS
+   5.  NAVBAR WITH THE FROSTED GLASS EFFECT
    ========================================================================== */
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
@@ -217,13 +215,13 @@ button {
     font-size: 0.75rem;
     font-weight: 800;
     padding: 0.4rem 1rem;
-    border-radius: 30px;
+    border-radius: 35px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 /* ==========================================================================
-   6. MAIN WORKSPACE & VIVID HERO HERO SECTION
+   6. MAIN WORKSPACE and VIVID HERO HERO SECTION
    ========================================================================== */
 .dashboard-container {
     max-width: 1440px;
@@ -247,7 +245,7 @@ button {
 }
 
 .hero-section h2 { font-size: 3rem; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.15; }
-.hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 650px; font-weight: 500; }
+.hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.3rem; max-width: 650px; font-weight: 500; }
 
 /* Filter Actions Bar */
 .search-filter-bar { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
@@ -267,7 +265,7 @@ button {
 }
 
 /* ==========================================================================
-   7. STUDENT VIEW: NEOMORPHIC CATALOG CARDS (WITH BOOK COVERS)
+   7. STUDENTS VIEW: NEOMORPHIC CATALOG CARDS (WITH BOOK COVER)
    ========================================================================== */
 .book-grid {
     display: grid;
@@ -292,7 +290,7 @@ button {
     box-shadow: 0 20px 35px rgba(99, 102, 241, 0.15);
 }
 
-/* Default Cover Block style that expects your script to inject an image url */
+/* Default Cover Block style that expects  script to inject an image url */
 .book-card-cover {
     width: 100%;
     height: 320px;
