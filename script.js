@@ -3,7 +3,7 @@ let books = [
     // --- FICTION ----
     { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Fiction", isbn: "9780743273565", location: "Floor 2, Wing A, Shelf F-1", status: "Available" },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Fiction", isbn: "9780061120084", location: "Floor 2, Wing A, Shelf F-2", status: "Available" },
-    { id: 3, title: "1984", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
+    { id: 3, title: "1954", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
     { id: 4, title: "The Catcher in the Rye", author: "J.D. Salinger", category: "Fiction", isbn: "9780316769174", location: "Floor 2, Wing B, Shelf F-4", status: "Available" },
     { id: 5, title: "The Hobbit", author: "J.R.R. Tolkien", category: "Fiction", isbn: "9780345339683", location: "Floor 2, Wing B, Shelf F-5", status: "Available" },
     { id: 6, title: "Fahrenheit 451", author: "Ray Bradbury", category: "Fiction", isbn: "9781451673319", location: "Floor 2, Wing C, Shelf F-6", status: "Borrowed" },
