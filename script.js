@@ -16,7 +16,7 @@ let books = [
     { id: 10, title: "One Hundred Years of Solitude", author: "Gabriel García Márquez", category: "Fiction", isbn: "9780060883287", location: "Floor 2, Wing E, Shelf F-10", status: "Borrowed" },
 
     // --- SCIENCE ---
-    { id: 11, title: "A Brief History of Time", author: "Stephen Hawking", category: "Science", isbn: "9780553380163", location: "Floor 1, Wing A, Shelf S-1", status: "Available" },
+    { id: 11, title: "A Brief History of times", author: "Stephen Hawking", category: "Science", isbn: "9780553380163", location: "Floor 1, Wing A, Shelf S-1", status: "Available" },
     { id: 12, title: "The Selfish Genes", author: "Richard Dawkins", category: "Science", isbn: "9780198788607", location: "Floor 1, Wing A, Shelf S-2", status: "Available" },
     { id: 13, title: "Cosmos", author: "Carl Sagan", category: "Science", isbn: "9780345331359", location: "Floor 1, Wing B, Shelf S-3", status: "Available" },
     { id: 14, title: "The Elegant Universe", author: "Brian Greene", category: "Science", isbn: "9780393338102", location: "Floor 1, Wing B, Shelf S-4", status: "Borrowed" },
