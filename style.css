@@ -53,7 +53,7 @@ body {
     -webkit-font-smoothing: antialiased;
     /* Fun subtle abstract background grid */
     background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
+    background-size: 25px 24px;
 }
 
 .hidden { display: none !important; }
