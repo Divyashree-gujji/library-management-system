@@ -25,7 +25,7 @@ let books = [
     { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Available" },
 
     // --- HISTORY ---
-    { id: 21, title: "The Guns of August", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
+    { id: 21, title: "The Guns of May and July", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
     { id: 22, title: "Battle Cry of Freedom", author: "James M. McPherson", category: "History", isbn: "9780195168952", location: "Floor 3, Wing A, Shelf H-2", status: "Borrowed" },
     { id: 23, title: "The Rise and Fall of the Third Reich", author: "William L. Shirer", category: "History", isbn: "9781451651683", location: "Floor 3, Wing B, Shelf H-3", status: "Available" },
     { id: 24, title: "Team of Rivals", author: "Doris Kearns Goodwin", category: "History", isbn: "9780743270755", location: "Floor 3, Wing B, Shelf H-4", status: "Available" },
