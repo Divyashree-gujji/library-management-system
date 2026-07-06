@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraLib — Next-Gen Library Asset Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head> 
+<body>
+
+    <div id="loginPage" class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">📚 Aura<span>Lib</span></div>
+                <h2>Welcome Back</h2>
+                <p>Sign in to tract assets and manage programs</p>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-wrapper">
+                    <label>Role Privile:ge</label>
+                    <select id="loginRole" onchange="autoFillCredentials()">
+                        <option value="student">Student Account Number(View Only)</option>
+                        <option value="admin">Library Administrator (Full Access)</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <label>Identification or Email Address</label>
+                    <input type="text" id="loginUser" value="student@university.edu" required>
+                </div>
+                <div class="input-wrapper">
+                    <label>Security Password</label>
+                    <input type="password" id="loginPass" value="student123" required>
+                </div>
+                <button type="submit" class="btn-primary auth-btn">Access Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="appInterface" class="hidden">
+        <header class="navbar">
+            <div class="logo">📚 Aura<span>Lib</span></div>
+            <div class="nav-profile">
+                <span id="userBadge" class="user-identity-badge">Student View</span>
+                <button id="toggleAdminBtn" class="btn-secondary" onclick="toggleAdminView()">Switch to the Admin</button>
+                <button class="btn-logout" onclick="handleLogout()">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-container">
+            <section id="studentView">
+                <div class="hero-section">
+                    <h2>Locate Library Assets Instantly.</h2>
+                    <p>Search through the real time catalog records with precise stack shelf mappings.</p>
+                </div>
+
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search by book title, author initials, or physical ISBN..." oninput="filterBooks()">
+                    </div>
+                    <div class="filter-box">
+                        <select id="categoryFilter" onchange="filterBooks()">
+                            <option value="all">All Categories</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Science">Science</option>
+                            <option value="History">History</option>
+                            <option value="Technology">Technology</option>
+			    <option value="none">none</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="results-meta">
+                    <span id="matchCounter">Showing all the books</span>
+                </div>
+
+                <div class="book-grid" id="bookGrid"></div>
+            </section>
+
+            <section id="adminView" class="hidden">
+                <div class="admin-grid-layout">
+                    <div class="admin-panel-card">
+                        <h3>Catalog New Acquisition</h3>
+                        <form id="addBookForm" onsubmit="createNewBook(event)">
+                            <div class="input-wrapper">
+                                <label>Book Title</label>
+                                <input type="text" id="addTitle" placeholder="e.g., Neuromancer" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label>Author</label>
+                                <input type="text" id="addAuthor" placeholder="e.g., William Gibson" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label>ISBN Registration Code</label>
+                                <input type="text" id="addIsbn" placeholder="e.g., 9780441569595" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label>Asset Classification Categorys</label>
+                                <select id="addCategory">
+                                    <option value="Fiction">Fiction</option>
+                                    <option value="Science">Science</option>
+                                    <option value="History">History</option>
+                                    <option value="Technology">Technology</option>
+                                </select>
+                            </div>
+                            <div class="input-wrapper">
+                                <label>Physical Storage Mapping Room or Shelf</label>
+                                <input type="text" id="addLocation" placeholder="e.g., Floor 3, Bay G-2" required>
+                            </div>
+                            <button type="submit" class="btn-primary w-100">Commit to Inventory</button>
+                        </form>
+                    </div>
+
+                    <div class="admin-table-wrapper">
+                        <div class="table-header-flex">
+                            <h3>Live Inventory Matrix</h3>
+                        </div>
+                        <table id="adminTable">
+                            <thead>
+                                <tr>
+                                    <th>Book Details</th>
+                                    <th>Classification</th>
+                                    <th>Assigned Storage Hub</th>
+                                    <th>Live Availability Status</th>
+                                    <th>Destructive Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="detailsModal" class="modal-overlay hidden" onclick="handleModalOverlayClick(event)">
+        <div class="modal-window">
+            <div class="modal-banner"></div>
+            <div class="modal-body">
+                <span class="close-modal-btn" onclick="closeModal()">&times;</span>
+                <span id="modalCategory" class="category-pill-tag">Category</span>
+                <h2 id="modalTitle">Book Title</h2>
+                <p class="modal-author-sub">by <span id="modalAuthor">Author Name</span></p>
+                
+                <div class="meta-specs-row">
+                    <div><strong>ISBN-13 Registry:</strong> <span id="modalIsbn"></span></div>
+                    <div><strong>System State:</strong> <span id="modalStatus"></span></div>
+                </div>
+
+                <div class="location-routing-card">
+                    <div class="loc-icon">📍</div>
+                    <div>
+                        <h4>Physical Location Coordinates</h4>
+                        <p id="modalLocation">Floor X, Stack Y, Row Z</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
