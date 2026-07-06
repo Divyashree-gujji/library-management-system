@@ -1,10 +1,9 @@
-
 :root {
-    --bg-primary: #f4f7fe;
-    --bg-surface: #ffffff;
-    --bg-surface-alt: #f8fafc;
+      bg-primary: #f4f7fe;
+      bg-surface: #ffffff;
+      bg-surface-alt: #f8fafc;
     
-    /* Energetic Accent Palette */
+    /* Energetic interface colors */
     --brand-primary: #6366f1;
     --brand-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
     --neon-pink: #f43f5e;
@@ -22,21 +21,31 @@
     --status-error: #ef4444;
     --status-error-bg: #fee2e2;
     
-    --radius-sm: 10px;
-    --radius-md: 18px;
-    --radius-lg: 28px;
+feature-branch
+    --radius-sm: 30px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+
+
+    --radius-sm: 20px;
+    --radius-md: 19px;
+    --radius-lg: 19px;
+
     
-    /* Glowing colorful shadows instead of muddy dark ones */
+feature-changes
+ main
+    
+    shadow-sm: 0 8px 6px -1px rgba(99, 102, 241, 0.05);
+
     --shadow-sm: 0 4px 6px -1px rgba(99, 102, 241, 0.05);
+main
     --shadow-md: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.05);
     --shadow-lg: 0 25px 50px -12px rgba(99, 102, 241, 0.15);
     
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===========================================================================
-   2. GLOBAL RESETS & BASE STYLES
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -51,20 +60,18 @@ body {
     -webkit-font-smoothing: antialiased;
     /* Fun subtle abstract background grid */
     background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
+    background-size: 25px 24px;
 }
 
 .hidden { display: none !important; }
 
-/* Premium Scrollbar */
+
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 20px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
-/* ==========================================================================
-   3. FORM CONTROLS & DYNAMIC BUTTONS
-   ========================================================================== */
+/
 h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -86,7 +93,7 @@ h1, h2, h3, h4 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Inputs with colorful active focus states */
+/* Inputs with the colorfull active focus states */
 .input-wrapper { margin-bottom: 1.5rem; }
 .input-wrapper label {
     display: block;
@@ -161,9 +168,7 @@ button {
 
 .w-100 { width: 100%; }
 
-/* ==========================================================================
-   4. AUTHENTICATION (LOGIN PAGE)
-   ========================================================================== */
+
 .auth-wrapper {
     min-height: 100vh;
     display: flex;
@@ -192,9 +197,7 @@ button {
 .auth-header h2 { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.5rem; }
 .auth-header p { color: var(--text-secondary); font-size: 0.95rem; }
 
-/* ==========================================================================
-   5. NAVBAR WITH FROSTED GLASS EFFECTS
-   ========================================================================== */
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
@@ -220,16 +223,13 @@ button {
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   6. MAIN WORKSPACE & VIVID HERO HERO SECTION
-   ========================================================================== */
+
 .dashboard-container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 3rem 4rem;
 }
 
-/* Eye-Catching Colorful Hero Card with Embedded Graphic */
 .hero-section {
     margin-bottom: 3rem;
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #c084fc 100%);
@@ -247,7 +247,7 @@ button {
 .hero-section h2 { font-size: 3rem; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.15; }
 .hero-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.3rem; max-width: 650px; font-weight: 500; }
 
-/* Filter Actions Bar */
+
 .search-filter-bar { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
 .search-box { flex: 1; }
 .filter-box { width: 260px; }
@@ -264,9 +264,7 @@ button {
     color: var(--brand-primary);
 }
 
-/* ==========================================================================
-   7. STUDENT VIEW: NEOMORPHIC CATALOG CARDS (WITH BOOK COVERS)
-   ========================================================================== */
+
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -290,7 +288,7 @@ button {
     box-shadow: 0 20px 35px rgba(99, 102, 241, 0.15);
 }
 
-/* Default Cover Block style that expects your script to inject an image url */
+
 .book-card-cover {
     width: 100%;
     height: 320px;
@@ -348,9 +346,7 @@ button {
 .status-pill.available { background: var(--status-success-bg); color: var(--status-success); }
 .status-pill.borrowed { background: var(--status-error-bg); color: var(--status-error); }
 
-/* ==========================================================================
-   8. ADMIN INTERFACE WORKBENCH
-   ========================================================================== */
+
 .admin-grid-layout {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -391,9 +387,7 @@ tr:hover td { background-color: var(--bg-surface-alt); }
 .btn-delete { background: transparent; color: var(--status-error); font-size: 0.85rem; font-weight: 700; }
 .btn-delete:hover { background: var(--status-error-bg); border-radius: 6px; }
 
-/* ==========================================================================
-   9. POPUP MODAL DIALOG MODALS
-   ========================================================================== */
+
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -449,9 +443,7 @@ tr:hover td { background-color: var(--bg-surface-alt); }
 .location-routing-card h4 { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.15rem; }
 .location-routing-card p { font-weight: 700; color: var(--text-primary); }
 
-/* ==========================================================================
-   10. MEDIA ADJUSTMENTS
-   ========================================================================== */
+
 @media (max-width: 1100px) {
     .admin-grid-layout { grid-template-columns: 1fr; }
 }

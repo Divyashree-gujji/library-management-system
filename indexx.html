@@ -1,51 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraLib — Next-Gen Library Asset Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head> 
-<body>
-
+feature-deatils
     <div id="loginPage" class="auth-wrapper">
         <div class="auth-card">
             <div class="auth-header">
-feature-books
-                <div class="logo">📚 Book<span>Hub</span></div>
-                <h2>Welcome to Auralib</h2>
-                <p>Sign in to track assets and manage catalog</p>
-
                 <div class="logo">📚 Aura<span>Lib</span></div>
-                <h2>Welcome Back</h2>
-                <p>Sign in to tract assets and manage programs</p>
-main
+                <h2>Welcome back</h2>
+                <p>Sign in to track assets and manage catalog</p>
             </div>
             <form onsubmit="handleLogin(event)">
                 <div class="input-wrapper">
-                    <label>Role Privile:ge</label>
+                    <label>Role Privilege</label>
                     <select id="loginRole" onchange="autoFillCredentials()">
- feature-books
-                        <option value="student">Student Portal</option>
-                        <option value="admin"> Administrator Portal</option>
-
-                        <option value="student">Student Account Number(View Only)</option>
+                        <option value="students">Student Account (View Only)</option>
                         <option value="admin">Library Administrator (Full Access)</option>
- main
                     </select>
                 </div>
                 <div class="input-wrapper">
-                    <label>Identification or Email Address</label>
+                    <label>Identification / Email</label>
                     <input type="text" id="loginUser" value="student@university.edu" required>
                 </div>
                 <div class="input-wrapper">
                     <label>Security Password</label>
                     <input type="password" id="loginPass" value="student123" required>
                 </div>
-                <button type="submit" class="btn-primary auth-btn">Login to Library</button>
+                <button type="submit" class="btn-secondary auth-btn">Access Dashboard</button>
             </form>
         </div>
     </div>
@@ -55,7 +32,7 @@ main
             <div class="logo">📚 Aura<span>Lib</span></div>
             <div class="nav-profile">
                 <span id="userBadge" class="user-identity-badge">Student View</span>
-                <button id="toggleAdminBtn" class="btn-secondary" onclick="toggleAdminView()">Switch to the Admin</button>
+                <button id="toggleAdminBtn" class="btn-primary" onclick="toggleAdminView()">Switch to Admin</button>
                 <button class="btn-logout" onclick="handleLogout()">Logout</button>
             </div>
         </header>
@@ -63,13 +40,8 @@ main
         <main class="dashboard-container">
             <section id="studentView">
                 <div class="hero-section">
- feature-books
-                    <h2>Discover Your Next Book.</h2>
-                    <p>Browse the library catalog quickly and find books with accurate shelf location.</p>
-
                     <h2>Locate Library Assets Instantly.</h2>
-                    <p>Search through the real time catalog records with precise stack shelf mappings.</p>
-main
+                    <p>Search through real-time catalog records with precise stack shelf mappings.</p>
                 </div>
 
                 <div class="search-filter-bar">
@@ -89,7 +61,7 @@ main
                 </div>
 
                 <div class="results-meta">
-                    <span id="matchCounter">Showing all the books</span>
+                    <span id="matchCounter">Showing all books</span>
                 </div>
 
                 <div class="book-grid" id="bookGrid"></div>
@@ -113,7 +85,7 @@ main
                                 <input type="text" id="addIsbn" placeholder="e.g., 9780441569595" required>
                             </div>
                             <div class="input-wrapper">
-                                <label>Asset Classification Categorys</label>
+                                <label>Asset Classification Category</label>
                                 <select id="addCategory">
                                     <option value="Fiction">Fiction</option>
                                     <option value="Science">Science</option>
@@ -122,7 +94,7 @@ main
                                 </select>
                             </div>
                             <div class="input-wrapper">
-                                <label>Physical Storage Mapping Room or Shelf</label>
+                                <label>Physical Storage Mapping Room/Shelf</label>
                                 <input type="text" id="addLocation" placeholder="e.g., Floor 3, Bay G-2" required>
                             </div>
                             <button type="submit" class="btn-primary w-100">Commit to Inventory</button>

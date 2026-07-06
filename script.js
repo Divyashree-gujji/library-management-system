@@ -1,9 +1,12 @@
 // LocaL In-Memory Database containing exactly 10 comprehensive records per category
 let books = [
-    // --- FICTION ----
+    // --- FICTION Based  on books ----
+
+    // --- FICTIONS ----
+
     { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Fiction", isbn: "9780743273565", location: "Floor 2, Wing A, Shelf F-1", status: "Available" },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Fiction", isbn: "9780061120084", location: "Floor 2, Wing A, Shelf F-2", status: "Available" },
-    { id: 3, title: "1984", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
+    { id: 3, title: "1954", author: "George Orwell", category: "Fiction", isbn: "9780451524935", location: "Floor 2, Wing A, Shelf F-3", status: "Borrowed" },
     { id: 4, title: "The Catcher in the Rye", author: "J.D. Salinger", category: "Fiction", isbn: "9780316769174", location: "Floor 2, Wing B, Shelf F-4", status: "Available" },
     { id: 5, title: "The Hobbit", author: "J.R.R. Tolkien", category: "Fiction", isbn: "9780345339683", location: "Floor 2, Wing B, Shelf F-5", status: "Available" },
     { id: 6, title: "Fahrenheit 451", author: "Ray Bradbury", category: "Fiction", isbn: "9781451673319", location: "Floor 2, Wing C, Shelf F-6", status: "Borrowed" },
@@ -13,8 +16,8 @@ let books = [
     { id: 10, title: "One Hundred Years of Solitude", author: "Gabriel García Márquez", category: "Fiction", isbn: "9780060883287", location: "Floor 2, Wing E, Shelf F-10", status: "Borrowed" },
 
     // --- SCIENCE ---
-    { id: 11, title: "A Brief History of Time", author: "Stephen Hawking", category: "Science", isbn: "9780553380163", location: "Floor 1, Wing A, Shelf S-1", status: "Available" },
-    { id: 12, title: "The Selfish Gene", author: "Richard Dawkins", category: "Science", isbn: "9780198788607", location: "Floor 1, Wing A, Shelf S-2", status: "Available" },
+    { id: 11, title: "A Brief History of times", author: "Stephen Hawking", category: "Science", isbn: "9780553380163", location: "Floor 1, Wing A, Shelf S-1", status: "Available" },
+    { id: 12, title: "The Selfish Genes", author: "Richard Dawkins", category: "Science", isbn: "9780198788607", location: "Floor 1, Wing A, Shelf S-2", status: "Available" },
     { id: 13, title: "Cosmos", author: "Carl Sagan", category: "Science", isbn: "9780345331359", location: "Floor 1, Wing B, Shelf S-3", status: "Available" },
     { id: 14, title: "The Elegant Universe", author: "Brian Greene", category: "Science", isbn: "9780393338102", location: "Floor 1, Wing B, Shelf S-4", status: "Borrowed" },
     { id: 15, title: "Astrophysics for People in a Hurry", author: "Neil deGrasse Tyson", category: "Science", isbn: "9780393609394", location: "Floor 1, Wing C, Shelf S-5", status: "Available" },
@@ -25,7 +28,7 @@ let books = [
     { id: 20, title: "What If?", author: "Randall Munroe", category: "Science", isbn: "9780544272996", location: "Floor 1, Wing E, Shelf S-10", status: "Borrowed" },
 
     // --- HISTORY ---
-    { id: 21, title: "The Guns of August", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
+    { id: 21, title: "The Guns of May and July", author: "Barbara W. Tuchman", category: "History", isbn: "9780345386236", location: "Floor 3, Wing A, Shelf H-1", status: "Available" },
     { id: 22, title: "Battle Cry of Freedom", author: "James M. McPherson", category: "History", isbn: "9780195168952", location: "Floor 3, Wing A, Shelf H-2", status: "Borrowed" },
     { id: 23, title: "The Rise and Fall of the Third Reich", author: "William L. Shirer", category: "History", isbn: "9781451651683", location: "Floor 3, Wing B, Shelf H-3", status: "Available" },
     { id: 24, title: "Team of Rivals", author: "Doris Kearns Goodwin", category: "History", isbn: "9780743270755", location: "Floor 3, Wing B, Shelf H-4", status: "Available" },
@@ -43,8 +46,8 @@ let books = [
     { id: 34, title: "The Pragmatic Programmer", author: "Andrew Hunt", category: "Technology", isbn: "9780135957059", location: "Floor 4, Wing B, Shelf T-4", status: "Available" },
     { id: 35, title: "JavaScript: The Good Parts", author: "Douglas Crockford", category: "Technology", isbn: "9780596517748", location: "Floor 4, Wing C, Shelf T-5", status: "Available" },
     { id: 36, title: "You Don't Know JS", author: "Kyle Simpson", category: "Technology", isbn: "9781491904244", location: "Floor 4, Wing C, Shelf T-6", status: "Borrowed" },
-    { id: 37, title: "Compilers: Principles, Techniques, and Tools", author: "Alfred Aho", category: "Technology", isbn: "9780321483461", location: "Floor 4, Wing D, Shelf T-7", status: "Borrowed" },
-    { id: 38, title: "Artificial Intelligence: A Modern Approach", author: "Stuart Russell", category: "Technology", isbn: "9780136042594", location: "Floor 4, Wing D, Shelf T-8", status: "Available" },
+    { id: 37, title: "Compilers: Principles, Techniques, and Tools", author: "Alfred Aho", category: "Technology", isbn: "9780321483461", location: "Floor 4, Wing D, Shelf T-7", status: "Available" },
+    { id: 38, title: "Artificial Intelligence: A Modern Approach", author: "Stuart Russell", category: "Technology", isbn: "9780136042594", location: "Floor 4, Wing D, Shelf T-8", status: "Borrowed" },
     { id: 39, title: "The Phoenix Project", author: "Gene Kim", category: "Technology", isbn: "9780988262591", location: "Floor 4, Wing E, Shelf T-9", status: "Available" },
     { id: 40, title: "Continuous Delivery", author: "Jez Humble", category: "Technology", isbn: "9780321601919", location: "Floor 4, Wing E, Shelf T-10", status: "Available" }
 ];
@@ -52,14 +55,17 @@ let books = [
 let sessionRole = null;
 let currentView = "student";
 
-// Autopopulate helper to save user testing evaluation speed
+
+// Autopopulate helper to save testing evaluation speed of the users
 function autoFillCredentials() {
     const role = document.getElementById("loginRole").value;
     document.getElementById("loginUser").value = role === "admin" ? "admin@university.edu" : "student@university.edu";
     document.getElementById("loginPass").value = role === "admin" ? "admin123" : "student123";
 }
 
-// Security Gate Engine
+
+// Security Gate Engines
+
 function handleLogin(e) {
     e.preventDefault();
     const role = document.getElementById("loginRole").value;
@@ -68,7 +74,7 @@ function handleLogin(e) {
     document.getElementById("loginPage").classList.add("hidden");
     document.getElementById("appInterface").classList.remove("hidden");
     
-    // UI adaptation based on privileges
+    // UI adaptation based on the privilege
     if (sessionRole === "student") {
         document.getElementById("toggleAdminBtn").classList.add("hidden");
         document.getElementById("userBadge").innerText = "🔒 Student Access";
@@ -108,7 +114,8 @@ function toggleAdminView() {
     else switchToStudentMode();
 }
 
-// Student View Rendering Grid Engine
+// Student View on the Rendering Grid Engines
+
 function renderStudentGrid(booksToRender = books) {
     const grid = document.getElementById("bookGrid");
     grid.innerHTML = "";
@@ -136,7 +143,7 @@ function renderStudentGrid(booksToRender = books) {
     });
 }
 
-// Core Search and Category Filter Algorithm
+// Core Search and Catagories Filter Algorithms
 function filterBooks() {
     const searchVal = document.getElementById("searchInput").value.trim().toLowerCase();
     const catVal = document.getElementById("categoryFilter").value;
@@ -152,7 +159,9 @@ function filterBooks() {
     renderStudentGrid(queryResult);
 }
 
-// Modal View Engine
+
+// Modal View Engine     
+
 function openDetailsModal(id) {
     const book = books.find(b => b.id === id);
     if (!book) return;
@@ -178,7 +187,8 @@ function handleModalOverlayClick(e) {
     if (e.target.id === "detailsModal") closeModal();
 }
 
-// Admin Table Inventory Management Render Engine
+
+// Admin Tables Inventory Management Render Engines
 function renderAdminTable() {
     const tbody = document.getElementById("adminTableBody");
     tbody.innerHTML = "";
@@ -219,7 +229,7 @@ function createNewBook(e) {
         status: "Available"
     };
 
-    books.unshift(newBook); // Prepend so it appears instantly at the top
+    books.unshift(newBook); // Prepends so it appears instantly at the top
     document.getElementById("addBookForm").reset();
     renderStudentGrid();
     renderAdminTable();
@@ -240,7 +250,7 @@ function deleteBookRecord(id) {
         renderAdminTable();
     }
 }
-// Make sure your rendering function loops out exactly this layout block:
+// Make sure that your rendering function loops  are exactly out of this layout blocks:
 filteredBooks.forEach(book => {
     const card = document.createElement('div');
     card.className = 'book-card';
